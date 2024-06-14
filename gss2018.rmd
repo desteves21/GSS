@@ -44,10 +44,10 @@ OWNGUN is a categorical variable, so I use the cat~cat helper file
 
 #### Graphical Descriptive Results
 
-```{R}
+```{r}
 barchartGC(~CAPPUN + OWNGUN,data=GSSdata)
-barchartGC(~CAPPUN + OWNGUN,data=GSSdata, type="percent"
-         
+barchartGC(~CAPPUN + OWNGUN,data=GSSdata, type="percent")
+
 ```
 
 This graph shows that half of gun owners are in favor of guns, while more than half of non-gun owners are not in favor of them.
@@ -58,7 +58,7 @@ This graph shows that half of gun owners are in favor of guns, while more than h
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
-```{R}
+```{r}
 table1 <- xtabs(~CAPPUN + OWNGUN,data=GSSdata)
 rowPerc(table1)
 colPerc(table1)
