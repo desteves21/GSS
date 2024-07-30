@@ -18,7 +18,6 @@ source("GrabData.R")
 
 
 
-
 #  Question 1
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
@@ -52,7 +51,7 @@ barchartGC(~CAPPUN + OWNGUN,data=GSSdata, type="percent")
 
 ```
 
-This graph shows that half of gun owners are in favor of guns, while more than half of non-gun owners are not in favor of them.
+This graph shows that half of gun owners are in favor of guns, while more than half of non-gun owners are not in favor of them.  
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
@@ -66,7 +65,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-This table shows that the relationship between gun ownership and opinions on capital punishment, indicate that a higher percentage of gun owners favor capital punishment compared to non-gun owners.
+This table shows that the relationship between gun ownership and opinions on capital punishment, indicate that a higher percentage of gun owners favor capital punishment compared to non-gun owners.  
 
   
 ### Inferential Results
@@ -79,10 +78,10 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The p-value for the Chi-squared test was p=0.0202, this means we reject the null hypothesis, and conclude that the opinion on capital punishment(CAPPUN) is not independent of gun ownership(OWNGUN)
+The p-value for the Chi-squared test was p=0.0202, this means we reject the null hypothesis, and conclude that the opinion on capital punishment(CAPPUN) is not independent of gun ownership(OWNGUN)  
 
 The p-value for the fisher exact test was p=0.01651, and the odds ration was 2.271:1
-the odds ratio, 2.271:1 means that people do no own a gun are 2.271 times more likely to oppose capital punishment(CAPPUN) 
+the odds ratio, 2.271:1 means that people do no own a gun are 2.271 times more likely to oppose capital punishment(CAPPUN)  
 
 
 #  Question 2
@@ -91,9 +90,23 @@ the odds ratio, 2.271:1 means that people do no own a gun are 2.271 times more l
 
 Is there a difference in years of education (EDUC) between the those who did or did not vote in 2012 (VOTE12)?
 
+
+
+### Introduction 
+$H_0$: There is no difference of years EDUC who did not VOTE12  
+
+$H_A$: There is a difference of years EDUC who did VOTE12  
+
+
 ## Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+
+EDUC is numerical 
+
+VOTE12 is a factor, so I use the helper file Num~Cat 
+
+
 
 ##Results
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
