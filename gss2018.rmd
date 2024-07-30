@@ -160,6 +160,11 @@ $H_A$: The score of a persons wordsum test is not independent of their schooling
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+WORDSUM is numerical
+
+DEGREE is categorical, so I use the helper file Num~Cat
+
+
 ##Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -170,9 +175,22 @@ $H_A$: The score of a persons wordsum test is not independent of their schooling
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+boxplot(WORDSUM~DEGREE,data=GSSdata)
+```
+
+The boxplot shows that as the education level goes up from less than high school to graduate, the median WORDSUM scores also increase. Graduates generally have higher WORDSUM scores compared to people with lower education levels.  
+
+
 #### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(WORDSUM~DEGREE,data=GSSdata)
+```
+
+The data shows that as people get more education, their WORDSUM scores usually go up. Graduates have the highest average and median scores, followed by those with Bachelor's degrees, then Junior College degrees, then High School degrees, and lastly, those with less than a High School education. This suggests that more education leads to better WORDSUM scores.  
 
 ### Inferential Results
 
