@@ -196,6 +196,12 @@ The data shows that as people get more education, their WORDSUM scores usually g
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+anova=aov(WORDSUM~DEGREE,data=GSSdata)
+summary(anova)
+```
+
+The data shows that we reject the null hypothesis because the p-value is 0.00000025, which is much smaller than 0.05. This indicates a difference in WORDSUM scores across different education levels.
 
 # Discussion and Conclusion
 
